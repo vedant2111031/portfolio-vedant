@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>My Portfolio</title>
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer">
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: 'Josefin Sans', sans-serif;
+			box-sizing: border-box;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.first {
+			height: 100vh;
+			width: 100%;
+			background-image: url(image/my\ photo1.png);
+			background-size: cover;
+			background-position: center;
+
+		}
+
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-top: 30px;
+			padding-left: 8%;
+			padding-right: 4%;
+		}
+
+		span {
+			color: #76b1cff3;
+		}
+
+		nav ul li {
+			list-style-type: none;
+			display: inline-block;
+			padding: 10px 25px;
+		}
+
+		nav ul li a {
+			color: rgb(50, 143, 134);
+			text-decoration: none;
+			font-weight: bold;
+			text-transform: capitalize;
+		}
+
+		nav ul li a:hover {
+			color: #56681c;
+			transition: .3s;
+		}
+
+		.content {
+			position: sticky;
+			top: 35%;
+			left: 10%;
+		}
+
+		h1 {
+			color: white;
+			margin: 20px 0px 20px;
+			font-size: 75px;
+		}
+
+		h3 {
+			color: white;
+			font-size: 25px;
+			margin-bottom: 50px;
+		}
+
+		h4 {
+			color: #fcfc;
+			letter-spacing: 2px;
+			font-size: 20px;
+		}
+
+		.contact {
+			width: 380px;
+			max-width: 100%;
+			position: relative;
+		}
+
+		.contact input:first-child {
+			display: inline-block;
+			width: 100%;
+			padding: 14px 130px 14px 15px;
+			border: 2px solid #781195;
+			outline: none;
+			border-radius: 30px;
+		}
+
+		.contact input:last-child {
+			position: absolute;
+			display: inline-block;
+			outline: none;
+			border: none;
+			padding: 10px 30px;
+			border-radius: 30px;
+			background-color: #644e1e;
+			color: white;
+			box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+			top: 6px;
+			right: 6px;
+		}
+
+		.about {
+			width: 100%;
+			padding: 100px 0px;
+			background-color: #1a1b19;
+		}
+
+		.about img {
+			height: auto;
+			width: 500px;
+		}
+
+		.about-text {
+			width: 550px;
+		}
+
+		.main {
+			width: 1130px;
+			max-width: 90%;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		.about-text h2 {
+			color: white;
+			font-size: 75px;
+			text-transform: capitalize;
+			margin-bottom: 20px;
+		}
+
+		.about-text p {
+			color: rgba(90, 136, 44, 0.8);
+			letter-spacing: 1px;
+			line-height: 28px;
+			font-size: 18px;
+			margin-bottom: 45px;
+		}
+
+		.qualification {
+			background: #101010;
+			width: 100%;
+			padding: 100px 0px;
+		}
+
+		.title h2 {
+			color: rgb(167, 192, 120);
+			font-size: 75px;
+			width: 1130px;
+			margin: 30px auto;
+			text-align: center;
+		}
+
+		.box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.box2 {
+			height: 280px;
+			width: 330px;
+			padding: 20px 35px;
+			background: #191919;
+			margin: 15px;
+			position: relative;
+			text-align: center;
+		}
+
+		.box2 i {
+			font-size: 50px;
+			display: block;
+			text-align: center;
+			margin: 25px 0px;
+			color: #679d20;
+
+		}
+
+		h5 {
+			color: rgb(122, 150, 175);
+			font-size: 23px;
+			margin-bottom: 15px;
+		}
+
+		.pra p {
+			color: #6cb326;
+			font-size: 16px;
+			line-height: 27px;
+			margin-bottom: 25px;
+		}
+
+		footer {
+			position: relative;
+			width: 100%;
+			height: 400px;
+			background: #101010;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		footer p:nth-child(1) {
+			font-size: 30px;
+			color: white;
+			margin-bottom: 20px;
+			font-weight: bold;
+		}
+
+		footer p:nth-child(2) {
+			color: white;
+			font-size: 17px;
+			width: 500px;
+			text-align: center;
+			line-height: 26px;
+		}
+
+		.social {
+			display: flex;
+			text-align: center;
+		}
+
+		.social a {
+			width: 45px;
+			height: 45px;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+			background: #6cb326;
+			border-radius: 50%;
+			margin: 22px 10px;
+			color: white;
+			text-decoration: none;
+			font-size: 20px;
+			padding-left: 20%;
+			padding-right: 20%;
+		}
+
+		.end {
+			text-align: center;
+			position: static;
+			color: #fcfc;
+			bottom: 35px;
+			font-size: 40px;
+			margin: 10px;
+		}
+		#contact{
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="first">
+		<nav>
+			<img src="image/logo1.jpeg" height="90" width="180">
+			<ul id="slidemenu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#qualification">Qualification</a></li>
+				<li><a href="#contact">Contact Me</a></li>
+			</ul>
+		</nav>
+
+		<div class="content">
+			<h4>Hey I am</h4>
+			<h1>Vedant <span>pandey</span></h1>
+			<h3>2nd Year Student Of AKGEC.</h3>
+		</div>
+	</div>
+	<div id="about">
+		<section class="about">
+			<div class="main">
+				<img src="image/my photo2.jpeg ">
+				<div class="about-text">
+					<h2>About<span> Me</span></h2>
+					<p>Hey I am Vedant.Am 19year old.I am from Lakhimpur Kheri(Uttar Pradesh).I have completed my
+						schooling from my hometown in UDCA.Now I am persuing btech in CS&IT from AKGEC(Gaziyabad).
+						Currently working on Web Development,DSA,and know language like C,C++.My Hobbies are to explore
+						history,play chess and cricket.
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div id="qualification">
+		<div class="qualification">
+			<div class="title">
+				<h2>Qualification<span>&Achivements</span></h2>
+			</div>
+
+			<div class="box">
+				<div class="box2">
+					<h5>Schooling</h5>
+					<div class="pra">
+						<p>Completed my schooling in cbse board school.
+							Did high school in 2019.
+							Scored 92.4 percentage in it.
+							Completed twelfth in 2021.
+							Scored 81 percentage in it.
+							I had participated in different events like codemaze,cybersecurity and
+						</p>
+					</div>
+				</div>
+
+				<div class="box2">
+					<h5>Sports</h5>
+					<div class="pra">
+						<p>I have won district level government chess championship in 2020 and was the captain of 2021
+							winner of Volleyball championship.
+						</p>
+					</div>
+				</div>
+				<div class="box2">
+					<h5>Skills</h5>
+					<div class="pra">
+						<p>i have a grip on c,c++ and a good knowledge of web development.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<footer>
+		<div id="contact">
+			<p>Vedant Pandey</p>
+			<p>For any further informaition please contact</p>
+			<div class="contact">
+				<input type="email" name="email" id="mail" placeholder="enter your email">
+				<input type="submit" name="submit" value="go">
+			</div>
+			<p class="end">Thankyou</p>
+			<div class="social">
+				<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+		</div>
+	</footer>
+</body>
+
+</html>
